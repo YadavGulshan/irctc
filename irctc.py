@@ -32,8 +32,8 @@ dateOfJourney = '26-11-2020'
 noOfPassengers = 3
 noOfPassengers_xpath = '//*[@id="numberOfPassengers"]/div/label'
 modifySearch_xpath = '//*[@id="ui-accordiontab-0-content"]/div/div/form/div[1]/div[6]/button'
-username = 'Gulshan541'
-password = 'Yadavgulshan541'
+username = 'your username' #case sensitive
+password = 'your paasword' #case sensitive
 driver.get("https://www.irctc.co.in/nget/train-search")
 assert "IRCTC" in driver.title
 ok = driver.find_element_by_xpath(ok_xpath)
@@ -45,10 +45,6 @@ def firstpage():
     from_station = driver.find_element_by_xpath(from_xpath)
     from_station.clear()
     from_station.send_keys(fromStation)
-
-    # pg.write(fromStation)
-    # pg.press("enter")
-
     pg.press("tab")
     pg.press("tab")
 
@@ -56,14 +52,11 @@ def firstpage():
     pg.press("tab")
     pg.press("backspace")
     pg.write(dateOfJourney)
-    # pg.press("enter")
     pg.press("tab")
 
     for i in range(0, 9):
         pg.press("down")
-    # classCoach = driver.find_element_by_xpath(class_xpth)
-    # classCoach.click()
-    # classCoach.click()
+    
     pg.press("tab")
     pg.press("tab")
     pg.press("tab")
@@ -77,15 +70,13 @@ def booknow():
     password_xpath.send_keys(password, Keys.RETURN)
 
     sleep(10)
-    print("sleep ended...............................................................")
+    print("sleep ended...............................................................Now rest of the things can only be done by you..!")
 
 
-# to_station = driver.find_element_by_xpath(to_xpath)
-# to_station.clear()
-# to_station.send_keys(toStation)
-# pg.press("enter")
 firstpage()
+print("Please click agree and ok !")
 sleep(15)
 booknow()
 sleep(10)
+print("fill captcha")
 # driver.close()
