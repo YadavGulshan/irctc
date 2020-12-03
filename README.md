@@ -1,5 +1,5 @@
 # Note:
-This program will not fully help you in booking trains through irctc, Since irctc does not allow user to view the actual web elements during add passengers.
+This program will not fully help you in booking trains through irctc. Some of the things are about to be added
 
 ## webdriver used:
 1.<a href="https://chromedriver.chromium.org/">chromedriver</a> <br>
